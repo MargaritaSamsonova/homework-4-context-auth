@@ -4,12 +4,6 @@ import { TestProvider } from '../../contexts/Auth';
 import { mount } from 'enzyme';
 
 describe("Хедер c контекстом { isAuthorized: true, email: 'test@test.ru' }", () => {
-  const context = { isAuthorized: true, email: 'test@test.ru' };
-  const wrapper = mount(
-    <TestProvider value={context}>
-      <Header />
-    </TestProvider>
-  );
 
   it('p.t-header-email содержит: test@test.ru', () => {
     expect(wrapper.find('p.t-header-email').text()).toBe('test@test.ru');

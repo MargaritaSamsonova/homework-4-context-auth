@@ -7,10 +7,12 @@ import Congratulations from '../Congratulations';
 import { AuthProvider, AuthConsumer } from '../../contexts/Auth';
 
 class App extends PureComponent {
+
+
   render() {
     return (
       <AuthProvider>
-        <Layout header={Header} footer={Footer}>
+        <Layout header={Header}>
           <AuthConsumer>
             {({ isAuthorized, authorize, authorizeError }) =>
               isAuthorized ? (
