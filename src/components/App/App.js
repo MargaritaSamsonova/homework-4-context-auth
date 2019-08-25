@@ -7,8 +7,6 @@ import Congratulations from '../Congratulations';
 import { AuthProvider, AuthConsumer } from '../../contexts/Auth';
 
 class App extends PureComponent {
-
-
   render() {
     return (
       <AuthProvider>

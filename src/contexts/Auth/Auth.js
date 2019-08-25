@@ -29,13 +29,10 @@ class AuthProvider extends PureComponent {
         isAuthorized: true
       }))
 
-      console.log('залогинились');
     } else {
       this.setState(() => ({
         authorizeError: 'Email или пароль введён не верно'
       }))
-
-      console.log('не залогинились');
     }
   }
 
