@@ -3,10 +3,16 @@ import Header from './Header';
 import { TestProvider } from '../../contexts/Auth';
 import { mount } from 'enzyme';
 
-describe("Хедер c контекстом { isAuthorized: true, email: 'test@test.ru' }", () => {
+describe("Хедер c контекстом { isAuthorized: true, email: 'stu@dent.com' }", () => {
+  const context = { isAuthorized: true, email: 'stu@dent.com' };
+  const wrapper = mount(
+      <TestProvider value={context}>
+        <Header />
+      </TestProvider>
+  );
 
-  it('p.t-header-email содержит: test@test.ru', () => {
-    expect(wrapper.find('p.t-header-email').text()).toBe('test@test.ru');
+  it('p.t-header-email содержит: stu@dent.com', () => {
+    expect(wrapper.find('p.t-header-email').text()).toBe('stu@dent.com');
   });
 
   it('Хедер содержит button.t-logout', () => {
